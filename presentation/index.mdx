@@ -1,193 +1,86 @@
-<!-- export { eightiesDark as theme } from './theme' -->
-export { aspect as theme } from '@mdx-deck/themes'
+import {Cite} from 'spectacle';
+import {DarkSlide, CodeSlide} from './slides';
+import RegularComponent from './regular-component';
 
-import { Head, Image, Notes, Appear } from '@mdx-deck/components'
-import { Invert, Split, SplitRight, FullScreenCode, Horizontal} from '@mdx-deck/layouts'
+# Spectacle MDX!
 
-import future from '@mdx-deck/themes/future'
-import aspect from '@mdx-deck/themes/aspect'
+**open the presentatiaaon/index.mdx file to get started**
 
-export const themes = [
-  future,
-  aspect,
-]
+---
+export default DarkSlide
 
-<Head>
-  <title>mdx-deck</title>
-  <meta name='twitter:card' content='summary_large_image' />
-  <meta name='twitter:site' content='@jxnblk' />
-  <meta name='twitter:title' content='mdx-deck' />
-  <meta name='twitter:description' content='MDX-based presentation decks' />
-  <meta name='twitter:image' content='https://jxnblk.com/mdx-deck/card.png' />
-</Head>
-
-# MDX Deck
-
-MDX-based presentation decks
+# Write your Spectacle Presentations in Markdown
+## And seamlessly use React Components
+**How sweet is that**
+**(super sweet)**
 
 ---
 
-# Built with [MDX][]
-[MDX]: https://github.com/mdx-js/mdx
-
----
-babel
-
-<Notes>
-
-- These are speaker notes
-- And they won't be rendered in your slide
-
-</Notes>
-
----
-
-> “Blockquotes are essential to any good presentation”
-
-– Anonymous
-
-<Notes>
-  <ul>
-    <li>Speaker notes can also be</li>
-    <li>Written in JSX</li>
-  </ul>
-</Notes>
-
----
-
-### Appear
-
-<ul>
-  <Appear>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-    <li>Four</li>
-  </Appear>
-</ul>
-
----
-
-<Image
-  src='https://source.unsplash.com/random/768x2048'
-  size='contain'
-/>
-
-<Notes>
-Testing object fit
-</Notes>
-
----
-
-### Real React Components
+![datboi](https://pbs.twimg.com/media/CkjFUyTXEAEysBY.jpg)
 
 
 ---
 
-<Image src='https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20' />
+<RegularComponent/>
 
 ---
 
-<Split>
+###### Typography
 
-![](https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20)
+# Heading 1
 
-## Split Layout
+## Heading 2
 
-</Split>
+### Heading 3
 
----
+#### Heading 4
 
-<SplitRight>
+##### Heading 5
 
-![](https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20)
+###### Heading 6
 
-## Split Layout
-
-(To the right)
-
-</SplitRight>
+Standard Text
 
 ---
 
-<Horizontal>
+###### Standard List
 
-![](https://source.unsplash.com/random/1024x768')
-
-![](https://source.unsplash.com/random/1024x768')
-
-### Horizontal Layout
-
-</Horizontal>
+- Item 1
+- Item 2
+- Item 3
+- Item 4
 
 ---
 
-<Invert>
+> Example Quote
 
-# Invert Layout
-
-</Invert>
+<Cite>Author</Cite>
 
 ---
+export default CodeSlide
 
-<FullScreenCode>
-
-```
-<Button>
-  Beep
-</Button>
+```javascript
+class SuperCoolComponent extends React.Component {
+  render() {
+    return (
+      <p>code slide works in markdown too whaaaaat</p>
+    );
+  }
+}
 ```
 
-</FullScreenCode>
 
----
 
-![](https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&h=1024&q=20&fit=crop)
-
-Inline image
-
----
-
-Prop | Type | Description
----|---|---
-`width` | number, string, or array | sets element width
-`color` | string | sets foreground color
-`bg` | string | sets background color
-
----
-
-<Invert>
-
-# Get started :sunglasses:
-
-[GitHub](https://github.com/jxnblk/mdx-deck)
-
-</Invert>
 
 
 ---
 
-# Upgrading React Native
+upgrading RN EU talk
 
-### Pavlos Vinieratos
 
-6 September 2019
+qna form?
 
-React Native EU 2019
 
----
-
-<Image
-  src='images/my-face.png'
-  css={{
-      width: '100%',
-      height: '30px',
-  }}
-/>
-
-I'm Pavlos
-
----
 bio:
 Hello, my name is Pavlos. Writing code is my hobby and my job. I enjoy making things that work, work well, work easy, mostly in that order!
 
@@ -278,7 +171,6 @@ enjoy the new stuff
 
 
 
-qna form?
 
 hand-up poll:
 - i have done an upgrade
