@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "A talk about how to upgrade your React Native projects",
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "pdf": "mdx-deck-export pdf deck.mdx",
+    "png": "mdx-deck-export png deck.mdx"
   },
   "author": "Pavlos Vinieratos <pvinis@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "mdx-deck": "^2.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@mdx-deck/export": "^2.4.0"
+  }
 }
