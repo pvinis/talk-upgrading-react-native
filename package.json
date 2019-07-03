@@ -1,0 +1,14 @@
+{
+  "name": "talk-upgrading-react-native",
+  "version": "1.0.0",
+  "description": "A talk about how to upgrade your React Native projects",
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "author": "Pavlos Vinieratos <pvinis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mdx-deck": "^2.4.0"
+  },
+  "devDependencies": {}
+}
