@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "A talk about how to upgrade your React Native projects",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
+    "start": "BROWSER=firefox mdx-deck deck.mdx",
     "pdf": "mdx-deck-export pdf deck.mdx",
     "png": "mdx-deck-export png deck.mdx",
     "build": "yarn pdf; yarn png"
   },
   "author": "Pavlos Vinieratos <pvinis@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "mdx-deck": "^2.4.0",
-    "@mdx-deck/export": "^2.4.0"
+    "@mdx-deck/export": "^2.4.0",
+    "mdx-deck": "^3.0.0"
   }
 }
