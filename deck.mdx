@@ -1,22 +1,59 @@
 
-
+<!--
 import comic from '@mdx-deck/themes/comic'
 import theme from './theme'
 
 export const themes = [
   comic,
   theme,
-]
+] -->
 
+import provider from 'components/provider'
+import { yellow as mdxTheme } from '@mdx-deck/themes'
+
+export const theme = {
+  ...provider,
+  ...mdxTheme,
+  colors: {
+    text: colors.lightOrange,
+    link: colors.lightOrange,
+    code: colors.black,
+    background: colors.black
+  },
+  metadata: {
+    author: `Josh Dzielak`,
+    twitter: `@dzello`,
+    hashtag: `#JAMstackParis`,
+    date: `May 28, 2019`,
+    repository: `https://github.com/developermode/mdx-talk`
+  },
+}
 
 
 # Hello!
 
 ---
 
-This is MDX Deck
+This is MDX Deck 1
+
+---
+This is MDX Deck 2
 
 
+
+
+<!--
+---
+
+- `react-native upgrade`
+- open the diff and go through the files
+	- first the easy files like package.json, eslintrc, gradle etc
+	- trying android
+	- https://github.com/react-native-community/cli/blob/master/docs/configuration.md to move rnpm to react-native.config.js
+	- trying to make the android with libs without auto, work
+	- -->
+
+---
 <!--
 export { eightiesDark as theme } from './theme'
 export { aspect as theme } from '@mdx-deck/themes'
@@ -420,3 +457,11 @@ credits:
 <!--
 
 https://medium.com/@marcelkalveram/upgrading-react-native-to-version-0-59-and-beyond-a-step-by-step-guide-d4c2926dd482 -->
+
+<!--
+
+'<insert github comments here for upgrading> '
+<insert my comment with help how to do it>
+
+upload to speakerdeck,
+and to my website -->

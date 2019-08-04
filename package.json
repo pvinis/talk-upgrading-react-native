@@ -10,7 +10,9 @@
   },
   "author": "Pavlos Vinieratos <pvinis@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@mdx-deck/themes": "^3.0.8"
+  },
   "devDependencies": {
     "@mdx-deck/export": "^2.4.0",
     "mdx-deck": "^3.0.0"
