@@ -2,19 +2,19 @@
   "name": "talk-upgrading-react-native",
   "version": "1.0.0",
   "description": "A talk about how to upgrade your React Native projects",
+  "author": "Pavlos Vinieratos <pvinis@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "BROWSER=firefox mdx-deck deck.mdx",
+    "start": "BROWSER=safari mdx-deck deck.mdx",
     "pdf": "mdx-deck-export pdf deck.mdx",
     "png": "mdx-deck-export png deck.mdx",
     "build": "yarn pdf; yarn png"
   },
-  "author": "Pavlos Vinieratos <pvinis@gmail.com>",
-  "license": "MIT",
   "dependencies": {
-    "@mdx-deck/themes": "^3.0.8"
+    "react-native-web": "^0.11.5"
   },
   "devDependencies": {
     "@mdx-deck/export": "^2.4.0",
-    "mdx-deck": "^3.0.0"
+    "mdx-deck": "^2.0.0"
   }
 }

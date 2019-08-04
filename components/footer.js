@@ -1,31 +1,27 @@
 import React from 'react'
+import { useDeck } from '@mdx-deck/components'
+import { View, Text } from 'react-native-web'
 
 
-export const Footer = ({ index, theme }) => (
-    <ul
-        css={{
-            position: 'fixed',
-            display: 'flex',
-            flexWrap: 'nowrap',
-            justifyContent: 'flex-end',
-            alignItems: 'center',
-            width: '100%',
-            right: 0,
+export const Footer = props => {
+    const state = useDeck()
+
+    return (
+        <View style={{
+            position: 'absolute',
             bottom: 0,
-            margin: 16,
-            color: theme.colors.text,
-            listStyleType: 'none',
-            opacity: 0.75,
-            li: {
-                padding: 8,
-            },
-        }}
-    >
-        <li>{index}</li>
-        <li><a href={`https://twitter.com/hashtag/${theme.metadata.hashtag}`}>{theme.metadata.hashtag}</a></li>
-        <li><a href={theme.metadata.repository} style={{ textDecoration: 'underline' }}>get the code</a></li>
-        <li css={{ flexGrow: 1 }}></li>
-        <li>{theme.metadata.author}</li>
-        <li><a href={`https://twitter.com/${theme.metadata.twitter}`}>{theme.metadata.twitter}</a></li>
-    </ul>
-)
+            height: 48,
+            borderTopWidth: 1,
+            borderTopColor: 'red',
+            width: '100%',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+        }}>
+            <Text>{state.index} / {state.length}</Text>
+            <Text>React Native EU 2019</Text>
+            <Text>Pavlos Vinieratos</Text>
+            <Text accessibilityRole='link' target="_blank" href='https://twitter.com/pvinis'>@pvinis</Text>
+        </View>
+    )
+}
