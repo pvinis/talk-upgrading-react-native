@@ -5,7 +5,7 @@
   "author": "Pavlos Vinieratos <pvinis@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "BROWSER=safari mdx-deck deck.mdx",
+    "start": "BROWSER=firefox mdx-deck deck.mdx",
     "pdf": "mdx-deck-export pdf deck.mdx",
     "png": "mdx-deck-export png deck.mdx",
     "build": "yarn pdf; yarn png"
@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "@mdx-deck/export": "^2.4.0",
-    "mdx-deck": "^2.0.0"
+    "mdx-deck": "^3.0.0"
   }
 }
