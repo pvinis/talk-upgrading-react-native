@@ -28,6 +28,13 @@ export const myTheme = {
         },
         h2: {
             color: accent,
+            fontWeight: 300, // light
+        },
+        h3: {
+            fontWeight: 300, // light
+        },
+        h4: {
+            fontWeight: 300, // light
         },
         inlineCode: {
             color: accent,

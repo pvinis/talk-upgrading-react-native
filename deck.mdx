@@ -1,4 +1,4 @@
-import { Notes, Head, themes } from 'mdx-deck'
+import { Notes, Head, Appear, themes, Split } from 'mdx-deck'
 
 import { myTheme } from './theme'
 import myFace from './images/my-face2.png'
@@ -25,13 +25,29 @@ Thanks to RN EU!
 
 ---
 
-I'm `Pavlos`.
+<Split>
 
-I work with `Sense Health` making [`NiceDay`](https://niceday.app/).
+<img src={myFace} />
+
+I'm `Pavlos`.
 
 `pvinis` on almost everything online.
 
-I am involved with `upgrade-helper`, `rn-diff-purge`, `react-native` PRs and I love `upgrading`!
+I work with `Sense Health` making [`NiceDay`](https://niceday.app/).
+
+<Appear>
+<div>
+I am involved with
+
+- `upgrade-helper`
+- `rn-diff-purge`
+- `react-native` PRs
+
+I love `upgrading`!
+</div>
+</Appear>
+
+</Split>
 
 <Notes>
 PR with creative names like `Crash Heaven`
@@ -48,10 +64,6 @@ I enjoy making things that:
 mostly in that order.
 
 ---
-
-<img src={myFace} />
-
-ok
 
 ---
 <!--
