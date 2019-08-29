@@ -29,12 +29,15 @@ export const myTheme = {
         h2: {
             color: accent,
             fontWeight: 300, // light
+            marginTop: 0,
         },
         h3: {
             fontWeight: 300, // light
+            marginTop: 0,
         },
         h4: {
             fontWeight: 300, // light
+            marginTop: 0,
         },
         inlineCode: {
             color: accent,
