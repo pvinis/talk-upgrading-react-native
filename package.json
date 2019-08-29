@@ -6,15 +6,13 @@
   "license": "MIT",
   "scripts": {
     "start": "BROWSER=firefox mdx-deck deck.mdx",
-    "pdf": "mdx-deck-export pdf deck.mdx",
-    "png": "mdx-deck-export png deck.mdx",
+    "site": "mdx-deck build deck.mdx; rm -rf docs; mv public docs",
+    "pdf": "npx website-pdf http://localhost:8000/print -o dist/presentation.pdf",
+    "png": "npx capture-website-cli --overwrite http://localhost:8000 dist/presentation.png",
     "build": "yarn pdf; yarn png"
   },
-  "dependencies": {
-    "react-native-web": "^0.11.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@mdx-deck/export": "^2.4.0",
     "mdx-deck": "^3.0.0"
   }
 }
