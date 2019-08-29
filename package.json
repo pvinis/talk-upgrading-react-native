@@ -5,7 +5,7 @@
   "author": "Pavlos Vinieratos <pvinis@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "BROWSER=firefox mdx-deck deck.mdx",
+    "start": "mdx-deck deck.mdx",
     "site": "mdx-deck build deck.mdx; rm -rf docs; mv public docs",
     "pdf": "npx website-pdf http://localhost:8000//print -o dist/presentation.pdf",
     "png": "npx capture-website-cli --overwrite http://localhost:8000 dist/presentation.png",
