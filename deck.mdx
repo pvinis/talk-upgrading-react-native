@@ -1,5 +1,6 @@
 import { Notes, Head, Appear, themes, Split } from 'mdx-deck'
 
+import { RAppear } from './components/reverse-appear'
 import { myTheme } from './theme'
 import myFace from './images/my-face2.png'
 
@@ -65,51 +66,75 @@ mostly in that order.
 
 ---
 
----
-<!--
-bio:
-Hello, my name is Pavlos. Writing code is my hobby and my job. I enjoy making things that work, work well, work easy, mostly in that order!
-
-title:
-Upgrading React Native apps now and in the future.
-Let's upgrade your React Native app!
-
-abstract: (?)
-Upgrading React Native projects has been a painful process since the beginning. There have been ways to make this process easier, but it’s still not as simple as running one command. What will it take to make this happen?
-Let’s take a good look at the upgrading process as a whole, the hard parts, the automatic steps and everything in between.
-
-
-who am i
-- name
-- blog
-- twitter
-- pvinis on most things
-- i started purge, i have done some rn prs (creative names :p)
+## Upgrading React Native projects
 
 ---
 
-#### Upgrading React Native apps
-
-- past: pain
-- present: just fine
-- future: easy life
+- past: `pain`
+- present: `fine`
+- future: `easy life`
 
 ---
 
-#### Past: pain
+## Past: `pain`
 
-it was the highest voted thing that people dislike about rn
-people love RN.                           people love fresh RN.
-people love RN.      upgrade..      people love fresh RN.
-thats the dreadful part for many.
-it is hard because not everyone is an expert on ios, android, js/ts eco, at the same time.
+---
+
+Question:
+
+`"What do you dislike about React Native?"`
+
+Top voted answer:
+
+`"upgrading requires a lot (too much?) effort"`
+
+<Notes>
+570 votes
+
+next was debuggin with 350 votes
+</Notes>
+
+---
+
+People love React Native
+
+<RAppear>
+
+## Upgrading
+
+People love `fresh` React Native
+
+</RAppear>
+
+<Notes>
+the dreadful part for many
+
+comes every so often
+
+per 2 weeks, 1 month, big feature
+</Notes>
+
+
+---
+
+It's hard because not everyone is an expert on ios, android, js/ts eco, at the same time.
 ios has cocoapods, carthage
+
+
 android has gradle
+
+<Notes>
+its hard because
+</Notes>
+
+---
 js/ts has packages like babel, metro, eslint, tsc
 upGrade was just change the package number, yarn install, and see if it works. some devs had ideas to automate this, and we got the original `react-native upgrade`, `rnpm upgrade`, `react-native-git-upgrade`, the rn-diff repo, rn-diff-purge. suffice it to say there were many iterations.
 kept rn-diff with a list of patches genarated from upgrading a simple rn app, that other users could apply. i found that and always manually upgraded, since that way i had a good idea of what changed. after a while, that got hard to maintain, so guess what, (xkcd about the frameworks +1) i forked rn-diff and made rn-diff-purge since it had to change the gen script enough. so it was easier as a fork. i wanted it for me, as i was and am still a fan of manual upgrading.
 
 ---
+
+<!--
 
 #### current work
 
