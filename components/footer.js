@@ -1,7 +1,16 @@
 import React from 'react'
-import { useDeck } from '@mdx-deck/components'
+import { useDeck } from 'mdx-deck'
 import { View, Text } from 'react-native-web'
 
+import { accent, text } from '../colors'
+
+const MyText = props => (
+    <Text {...props} style={{
+        color: text,
+        fontFamily: 'Iosevka Web',
+        fontSize: 30,
+    }} />
+)
 
 export const Footer = props => {
     const state = useDeck()
@@ -10,18 +19,18 @@ export const Footer = props => {
         <View style={{
             position: 'absolute',
             bottom: 0,
-            height: 48,
+            height: 40,
             borderTopWidth: 1,
-            borderTopColor: 'red',
+            borderTopColor: accent,
             width: '100%',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-around',
         }}>
-            <Text>{state.index} / {state.length}</Text>
-            <Text>React Native EU 2019</Text>
-            <Text>Pavlos Vinieratos</Text>
-            <Text accessibilityRole='link' target="_blank" href='https://twitter.com/pvinis'>@pvinis</Text>
+            <MyText>{state.index} / {state.length}</MyText>
+            <MyText>React Native EU 2019</MyText>
+            <MyText>Pavlos Vinieratos</MyText>
+            <MyText accessibilityRole='link' target="_blank" href='https://twitter.com/pvinis'>@pvinis</MyText>
         </View>
     )
 }
