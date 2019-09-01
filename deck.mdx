@@ -225,15 +225,153 @@ suffice it to say there were many iterations.
 
 ---
 
+I never liked using any of the `automated` tools 😅
+
+I only used `rn-diff`
+
+---
+
+### my flow
+
+- get `notification` for new release
+- read the `release notes`
+- go to `rn-diff` to see the `diff`, or `generate` it
+- go `file-by-file` and make the changes manually
+
+Upgrading `manually` helped me understand `what changed` in my projects
+
+I `almost never` had a problem
+
+<Notes>
+when i had a problem it was because there was a difference between my code and the template
+</Notes>
+
+---
+
+## Present: `good`
+
+---
+
+- `rn-diff-purge`
+- `upgrade-helper`
+- `npx react-native upgrade` (`cli`)
+
+---
+
+### rn-diff-purge
+
+- stood on the shoulders of the people and repos before me
+- tries to remove all previous problems
+- I wanted this for my projects
+
+<Notes>
+problems:
+
+- linear upgrading, grid is better, rc
+- github diffing cant handle branches
+
+like most open source.. for me to use, happy if anyone else uses it too
+</Notes>
+
+---
+
+### rn-diff-purge
+
+- keeps a list of patches `from -> to` every release
+- `generated` by a script
+- each release gets a branch
+
+<Notes>
+https://github.com/react-native-community/rn-diff-purge
+
+show the grid
+</Notes>
+
+---
+
+### rn-diff-purge
+
+- based on the project init `template`
+- start a new `branch`
+- `init` a new project
+- `diff` and keep as a patch file
+
+<Notes>
+init using the new release
+
+from -> every other release, with the current release
+
+even downgrades
+
+create-react-app
+</Notes>
+
+---
+
+### rn-diff-purge
+
+- base of our current upgrade flow
+- people already used the idea for `laravel` and `ignite bowser`
+- soon a template repo on github, ready to be cloned and reused
+
+<Notes>
+links at the end
+</Notes>
+
+---
+
+### upgrade-helper
+
+- started as `purge-web`, just pointing to the `diff` file
+- allows to chose a `from` and a `to` release
+- gives all the changes of the `init template`
+- uses `rn-diff-purge`
+- steadily becoming `more awesome`
+
+---
+
+### upgrade-helper
+
+- better visuals
+- `github-like` diff views
+- see `raw` files
+- file `folding`
+- `links` to release notes
+- notes `explaining` changes
+- logo and party popper 🎉
+- support for `rc releases`
+
+<Notes>
+https://react-native-community.github.io/upgrade-helper/
+</Notes>
+
+---
+
+### npx react-native upgrade (cli)
+
+- just run `npx react-native upgrade`
+- uses `rn-diff-purge`
+
+Not perfect, because of differences between the template and each project
+
+<Notes>
+
+each project is unique
+
+cant cover everyone, but we can cover most people, and most rn core related things
+
+it kind of becomes their responsibility to make sure it works after an upgrade
+
+- typescript
+- fancy eslint config
+- xcconfigs
+- tvos
+
+</Notes>
+
+---
+
 <!--
-
-#### current work
-
-purge seems to be the most stable and consistent way to do the upgrades using this way (this way is to get the template, old and new, and compare).
-purge-web is a simple interface to get the manual diffs
-in 0.59 @thymikee already made rn-cli to do `react-native upgrade` using the purge way, and we will improve on this.
-there is also work done @watadarkstar to take the simple purge-web and supercharge it, so users can have one place they can go, adn no matter if they prefer manual, automatic or whatever, they can get instructions to complete the upgrade.
-(of course each project is unique and we can never cover everyone, but we can cover most people, and most rn core related things. everything else that someone might add, it kind of becomes their responsibility to make sure it works after an upgrade)
 
 @ncuillery
 @lucasbento
