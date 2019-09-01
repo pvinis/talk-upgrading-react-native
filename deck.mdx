@@ -55,6 +55,7 @@ PR with creative names like `Crash Heaven`
 </Notes>
 
 ---
+<!--
 
 I enjoy making things that:
 
@@ -65,6 +66,7 @@ I enjoy making things that:
 mostly in that order.
 
 ---
+-->
 
 ## Upgrading React Native projects
 
@@ -147,12 +149,12 @@ its hard because
 
 ### `expo` exists
 
-- it's awesome
-- it helps people get started and continue without the need to go native
+- it's `awesome`
+- it helps people build apps without the need to go native
 
 <Appear>
 
-...until you need to go native
+...until you `need` to go native
 
 </Appear>
 
@@ -177,7 +179,32 @@ can go very hard
 
 ---
 
-upGrade was just change the package number, yarn install, and see if it works. some devs had ideas to automate this, and we got the original `react-native upgrade`, `rnpm upgrade`, `react-native-git-upgrade`, the rn-diff repo, rn-diff-purge. suffice it to say there were many iterations.
+upgrading `react` on the web means:
+
+- change the version number
+- yarn install
+- see if it works
+
+<Notes>
+by running tests or click around
+</Notes>
+
+---
+
+upgrading `react native`
+
+- change the version number
+- yarn install
+- see if it works
+- fix native stuff
+- see if it works
+- fix libraries native stuff
+- see if it works
+- see if it works
+
+---
+
+som devs had ideas to automate this, and we got the original `react-native upgrade`, `rnpm upgrade`, `react-native-git-upgrade`, the rn-diff repo, rn-diff-purge. suffice it to say there were many iterations.
 kept rn-diff with a list of patches genarated from upgrading a simple rn app, that other users could apply. i found that and always manually upgraded, since that way i had a good idea of what changed. after a while, that got hard to maintain, so guess what, (xkcd about the frameworks +1) i forked rn-diff and made rn-diff-purge since it had to change the gen script enough. so it was easier as a fork. i wanted it for me, as i was and am still a fan of manual upgrading.
 
 ---
