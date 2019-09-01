@@ -117,18 +117,66 @@ next was debuggin with 350 votes
 
 ---
 
-It's hard because not everyone is an expert on ios, android, js/ts eco, at the same time.
-ios has cocoapods, carthage
-
-
-android has gradle
+You need to know all:
+- JS/TS
+- iOS
+- Android
 
 <Notes>
 its hard because
 </Notes>
 
 ---
-js/ts has packages like babel, metro, eslint, tsc
+
+### iOS
+
+- ObjC/Swift
+- complicated `xcodeproj` files and `scheme`s and `config`s
+- `carthage`, `cocoapods`, `manual` ways to link libraries
+- Xcode
+
+---
+
+### Android
+
+- Java/Kotlin
+- `gradle` scripts
+- Android Studio
+
+---
+
+### `expo` exists
+
+- it's awesome
+- it helps people get started and continue without the need to go native
+
+<Appear>
+
+...until you need to go native
+
+</Appear>
+
+<Notes>
+need to eject, and back to the hard part
+</Notes>
+
+---
+
+### JS/TS
+
+- `babel`, `metro`, `eslint`, `typescript`, ...
+- `net-info`, `keep-awake`, `async-storage`, ...
+
+<Notes>
+only js easy
+
+native too can go easy
+
+can go very hard
+</Notes>
+
+---
+
 upGrade was just change the package number, yarn install, and see if it works. some devs had ideas to automate this, and we got the original `react-native upgrade`, `rnpm upgrade`, `react-native-git-upgrade`, the rn-diff repo, rn-diff-purge. suffice it to say there were many iterations.
 kept rn-diff with a list of patches genarated from upgrading a simple rn app, that other users could apply. i found that and always manually upgraded, since that way i had a good idea of what changed. after a while, that got hard to maintain, so guess what, (xkcd about the frameworks +1) i forked rn-diff and made rn-diff-purge since it had to change the gen script enough. so it was easier as a fork. i wanted it for me, as i was and am still a fan of manual upgrading.
 
