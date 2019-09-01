@@ -46,6 +46,9 @@ export const myTheme = {
             color: accent,
             fontSize: '30px',
         },
+        a: {
+            color: accent,
+        },
         p: {
             textAlign: 'center',
         },
