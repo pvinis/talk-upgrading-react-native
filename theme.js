@@ -1,9 +1,20 @@
-const blue = '#3AD'
+const blue = '#3ad'
+const purple = '#fa73ff'
 
 
-const accent = blue
-const background = '#222'
-const text = '#aaa'
+const light = {
+    background: '#bbb',
+    text: '#222',
+    accent: '#3489eb',
+}
+const dark = {
+    background: '#222',
+    text: '#aaa',
+    accent: purple,
+}
+
+
+const { accent, background, text } = dark
 
 
 export const myTheme = {
