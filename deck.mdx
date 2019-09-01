@@ -206,6 +206,8 @@ upgrading `react native` meant:
 - see if it works
 - fix native stuff
 - see if it works
+- upgrade libraries
+- see if it works
 - fix libraries native stuff
 - see if it works
 - google things
@@ -252,6 +254,8 @@ Upgrading `manually` helped me understand `what changed` in my projects
 I `almost never` had a problem
 
 <Notes>
+https://github.com/ncuillery/rn-diff
+
 when i had a problem it was because there was a difference between my code and the template
 </Notes>
 
@@ -274,6 +278,8 @@ when i had a problem it was because there was a difference between my code and t
 - I wanted this for my projects
 
 <Notes>
+https://github.com/react-native-community/rn-diff-purge/tree/old/master
+
 problems:
 
 - linear upgrading, grid is better, rc
@@ -286,15 +292,9 @@ like most open source.. for me to use, happy if anyone else uses it too
 
 ### rn-diff-purge
 
-- keeps a list of patches `from -> to` every release
+- keeps a list of diffs `from -> to` every release
 - `generated` by a script
 - each release gets a branch
-
-<Notes>
-https://github.com/react-native-community/rn-diff-purge
-
-show the grid
-</Notes>
 
 ---
 
@@ -306,13 +306,17 @@ show the grid
 - `diff` and keep as a patch file
 
 <Notes>
+
+https://github.com/react-native-community/rn-diff-purge
+
+show the grid
+
 init using the new release
 
 from -> every other release, with the current release
 
 even downgrades
 
-create-react-app
 </Notes>
 
 ---
@@ -324,6 +328,8 @@ create-react-app
 - soon a template repo on github, ready to be cloned and reused
 
 <Notes>
+create-react-app
+
 links at the end
 </Notes>
 
@@ -360,8 +366,9 @@ https://react-native-community.github.io/upgrade-helper/
 
 - just run `npx react-native upgrade`
 - uses `rn-diff-purge`
+- tries to `apply` the diff
 
-Not perfect, because of differences between the template and each project
+It might not work because of differences between the template and each project
 
 <Notes>
 
@@ -369,7 +376,7 @@ each project is unique
 
 cant cover everyone, but we can cover most people, and most rn core related things
 
-it kind of becomes their responsibility to make sure it works after an upgrade
+it kind of becomes your responsibility to make sure it works after an upgrade
 
 - typescript
 - fancy eslint config
@@ -400,9 +407,10 @@ it kind of becomes their responsibility to make sure it works after an upgrade
 @`Luckyuke`
 @`nirre7`
 @`guhungry`
+...
 
 - RN Core team
-- RN Contributors people
+- RN Contributors community
 - Sense Health
 
 <Notes>
@@ -423,7 +431,7 @@ you for helping in the future
 - get diff from `upgrade-helper`
 - go `file-by-file` and make the changes manually
 - start with `config` and `js` stuff, then `iOS`, then `Android` native
-- make sure `my custom additions` are compatible and working
+- make sure `any custom additions` are compatible and working
 - `test` to make sure things still work
 - use hooks or whaveter `cool new feature` is in that new release or rc 💪
 
@@ -440,8 +448,8 @@ npx r-n upgrade, even if its not perfect, report issues
 ### tips
 
 - manual does not mean `slow`, it means `careful`
-- `pick and choose` your changes
 - be mindful of `what changed`
+- `pick and choose` your changes
 - try to `stay up to date`
 - try not to `jump` too many versions
 - `xcodeproj` needs to be similarly changed
@@ -492,12 +500,25 @@ Look around, contribute:
 
 ---
 
-# Thank you 💜
+Don't be afraid of upgrading
+
+Try the suggested flow
+
+Try the tips
+
+Talk with your team
+
+<Notes>
+hope good summary of upgrading history and future
+</Notes>
 
 ---
 
 ## Thank you 💜
 
+---
+
+## Thank you 💜
 
 - https://github.com/react-native-community
 - https://niceday.app (app I'm working on)

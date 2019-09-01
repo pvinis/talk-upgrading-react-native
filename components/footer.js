@@ -27,7 +27,7 @@ export const Footer = props => {
             alignItems: 'center',
             justifyContent: 'space-around',
         }}>
-            <MyText>{state.index} / {state.length}</MyText>
+            <MyText>{state.index} / {state.length - 1}</MyText>
             <MyText>React Native EU 2019</MyText>
             <MyText>Pavlos Vinieratos</MyText>
             <MyText accessibilityRole='link' target="_blank" href='https://twitter.com/pvinis'>@pvinis</MyText>
