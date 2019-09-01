@@ -34,7 +34,7 @@ I'm `Pavlos`.
 
 `pvinis` on almost everything online.
 
-I work with `Sense Health` making [`NiceDay`](https://niceday.app/).
+I work with `Sense Health` making `NiceDay`
 
 <Appear>
 <div>
@@ -90,11 +90,20 @@ per 2 weeks, 1 month, big feature
 
 ## Upgrading React Native projects
 
+<Notes>
+
+show of hands
+
+- done an upgrade?
+- painful, ok, so easy?
+
+</Notes>
+
 ---
 
 - past: `pain`
-- present: `good`
-- future: `easy life`
+- present: `pretty good`
+- future: `awesome`
 
 ---
 
@@ -234,7 +243,7 @@ I only used `rn-diff`
 ### my flow
 
 - get `notification` for new release
-- read the `release notes`
+- read the `release notes` and `change log`
 - go to `rn-diff` to see the `diff`, or `generate` it
 - go `file-by-file` and make the changes manually
 
@@ -248,7 +257,7 @@ when i had a problem it was because there was a difference between my code and t
 
 ---
 
-## Present: `good`
+## Present: `pretty good`
 
 ---
 
@@ -371,166 +380,144 @@ it kind of becomes their responsibility to make sure it works after an upgrade
 
 ---
 
-<!--
+### wonderful people so far
 
-@ncuillery
-@lucasbento
-@kelset
-@cpojer
+@`ncuillery`
+@`lucasbento`
+@`kelset`
+@`cpojer`
+@`thymikee`
+@`turnrye`
+@`grabbou`
+@`brentvatne`
+@`watadarkstar`
+@`iamrestrepo`
+@`mausworks`
+@`KevinHu2014`
+@`vinnyA3`
+@`Jeanmsilva89`
+@`RubenSandwich`
+@`Luckyuke`
+@`nirre7`
+@`guhungry`
 
-@watadarkstar iamrestrepo
+- RN Core team
+- RN Contributors people
+- Sense Health
 
-add laravel and ingite guy
+<Notes>
+thanks to these wonderful people for their time and effort
 
----
+everyone else i forgot
 
-#### future: cli, website
-
-try the link-less for android and maybe cocoapods for ios
-
-purge running in CI
-
----
-
-demo?
-
-real senario
-i want to upgrade!
-go read the changelog first. learn about what and why of changes (or blog)
-i read it, it was cool stuff, i want it!
-run `react-native upgrade`
-but you said its not ready yet! or it didnt work for me!
-true. go to upgrade-helper do it manually
-start with config and js stuff, go to ios and android after
-yey done!
-run your tests, manual test
-yeayea let me add hooks.
-do it, you have the latest version
-
-
-final:
-changelog
-upgrade auto or manual
-make sure it not broken
-enjoy the new stuff
-
-
-
-
-qna form?
-
-hand-up poll:
-- i have done an upgrade
-- i prefer manual or i prefer auto
-
+you for helping in the future
+</Notes>
 
 ---
 
-# Questions?
+### current flow
 
-- sense
-- links to all the others, like bento, mfik or something, etc.
-- packt upgrade video?
+- get `notification` for new release
+- read the `release notes` and `change log`
+- try `npx react-native upgrade`
+- get diff from `upgrade-helper`
+- go `file-by-file` and make the changes manually
+- start with `config` and `js` stuff, then `iOS`, then `Android` native
+- make sure `my custom additions` are compatible and working
+- `test` to make sure things still work
+- use hooks or whaveter `cool new feature` is in that new release or rc 💪
+
+<Notes>
+
+new release, get excited
+
+npx r-n upgrade, even if its not perfect, report issues
+
+</Notes>
+
+---
+
+### tips
+
+- manual does not mean `slow`, it means `careful`
+- `pick and choose` your changes
+- be mindful of `what changed`
+- try to `stay up to date`
+- try not to `jump` too many versions
+- `xcodeproj` needs to be similarly changed
+
+<Notes>
+
+file by file means we pick and choose. maybe we skip a file, maybe we dont need it.
+
+manual is not slow. its careful
+
+xcode you need to change things in xcode, and see the diff
+
+it will be easier in the future
+
+</Notes>
+
+---
+
+## Future: `awesome`
+
+---
+
+- `autolinking` and standardization of some tools
+- `rn-diff-purge` diff generation on CI
+- investigating into tools to make things easier and decoupled like `xcodegen` etc
+
+<Notes>
+
+with help with the upgrading, not so many differences
+
+same as with cocoapods
+
+</Notes>
+
+---
+
+### wonderful people of tomorrow
+
+@`your_name_here`
+
+https://github.com/react-native-community
+
+https://github.com/react-native
+
+Look around, contribute:
+- make PRs
+- test out PRs
+- create issues
+- answer issues
+
+---
+
+# Thank you 💜
+
+---
+
+## Thank you 💜
 
 
+- https://github.com/react-native-community
+- https://niceday.app (app I'm working on)
+- https://github.com/guhungry/laravel-diff-purge (uses the purge way)
+- https://github.com/nirre7/ignite-bowser-diff-purge (uses the purge way)
+- https://github.com/pvinis/template-diff-purge (template of the purge way)
+- https://github.com/pvinis/talk-upgrading-react-native (this talk)
+- https://pvin.is (my blog, under construction 🚧)
+- https://pavlos.dev (my portfolio, even more under construction 🚧)
+- https://github.com/pvinis (my github)
+- https://twitter.com/pvinis (my twitter)
 
-https://pvin.is
-
-
-
-
-why i like upgrading
-
-give me betas and take my soul
-
-
-qna form?
-
-
-make a slide with stuff added in each release, and say that its also a bunch of fixes. Itterally, “a bunch”
-
-
-
-
-ng the scope of this issue but if you have the desire to answer further I would appreciate the help.
-Essentially react-native upgrade was not working for me so I am going the manual route. The first link you have provided for the upgrade guide is what I have been referencing.
-However, it's a bit confusing.
-Am I supposed to literally update the MODIFIED files by pasting in the changes?
-When a file is ADDED how do you know it's proper location in the project?
-For ios/Podfile which was added, do to add all of those pods somewhere specific? Or just the text above the message "All these libraries below have been removed from the Xcode project file and now live in the Podfile. Cocoapods handles the linking now. Here you can add more libraries with native modules."? What about all the pods below?
-Thanks for your time. Sorry it's just that this upgrade process isn't very clear to me.
-
-
-
-future: cli, website
-try the link-less for android and maybe cocoapods for ios
-
-demo?
-
-real senario
-i want to upgrade!
-go read the changelog first. learn about what and why of changes (or blog)
-i read it, it was cool stuff, i want it!
-run `react-native upgrade`
-but you said its not ready yet! or it didnt work for me!
-true. go to upgrade-helper do it manually
-start with config and js stuff, go to ios and android after
-yey done!
-run your tests, manual test
-yeayea let me add hooks.
-do it, you have the latest version
-
-
-final:
-changelog
-upgrade auto or manual
-make sure it not broken
-enjoy the new stuff
- -->
 
 
 <!--
 
-hand-up poll:
-- i have done an upgrade
-- i prefer manual or i prefer auto
-
-credits:
-- sense
-- links to all the others, like bento, mfik or something, etc.
-- my blog
-- my twitter and gh
-- packt upgrade video?
-- -->
-
-<!--
-
-https://medium.com/@marcelkalveram/upgrading-react-native-to-version-0-59-and-beyond-a-step-by-step-guide-d4c2926dd482 -->
-
-<!--
-
-'<insert github comments here for upgrading> '
-<insert my comment with help how to do it>
-
-link to https://github.com/pvinis/talk-upgrading-react-native/
-
-upload to speakerdeck,
-and to my website -->
-
-
-<!--
-
-- `react-native upgrade`
-- open the diff and go through the files
-	- first the easy files like package.json, eslintrc, gradle etc
-	- trying android
-	- https://github.com/react-native-community/cli/blob/master/docs/configuration.md to move rnpm to react-native.config.js
-	- trying to make the android with libs without auto, work
-
-links:
-https://github.com/guhungry/laravel-diff-purge
-https://github.com/nirre7/ignite-bowser-diff-purge
-
+frmo packt
+https://www.youtube.com/watch?v=wBp5_E7dsEY
 
 
 add footer with @pvinis and maaaybe number slides

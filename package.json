@@ -7,9 +7,9 @@
   "scripts": {
     "start": "mdx-deck deck.mdx",
     "site": "mdx-deck build deck.mdx; rm -rf docs; mv public docs",
-    "pdf": "npx website-pdf http://localhost:8000//print -o dist/presentation.pdf",
-    "png": "npx capture-website-cli --overwrite http://localhost:8000 dist/presentation.png",
-    "build": "yarn pdf; yarn png"
+    "pdf": "npx website-pdf http://localhost:8000//print -o talk.pdf",
+    "png": "npx capture-website-cli --overwrite http://localhost:8000 talk.png",
+    "build": "yarn pdf; yarn png; yarn site"
   },
   "dependencies": {},
   "devDependencies": {
