@@ -219,7 +219,7 @@ almost the same
 
 ---
 
-"Let's automate this"
+### "Can't avoid it, let's automate it"
 
 - original `react-native upgrade`
 - `rnpm upgrade`
@@ -241,25 +241,6 @@ suffice it to say there were many iterations.
 I never liked using any of the `automated` tools 😅
 
 I only used `rn-diff`
-
----
-
-### my flow
-
-- get `notification` for new release
-- read the `release notes` and `change log`
-- go to `rn-diff` to see the `diff`, or `generate` it
-- go `file-by-file` and make the changes manually
-
-Upgrading `manually` helped me understand `what changed` in my projects
-
-I `almost never` had a problem
-
-<Notes>
-https://github.com/ncuillery/rn-diff
-
-when i had a problem it was because there was a difference between my code and the template
-</Notes>
 
 ---
 
@@ -389,6 +370,93 @@ it kind of becomes your responsibility to make sure it works after an upgrade
 
 ---
 
+## Future: `awesome`
+
+---
+
+- `autolinking` and standardization of some tools
+- `rn-diff-purge` diff generation on CI
+- investigating into tools like `xcodegen`, to decouple and make easier
+
+<Notes>
+
+with help with the upgrading, not so many differences
+
+same as with cocoapods
+
+</Notes>
+
+---
+
+### old flow
+
+- get `notification` for new release
+- read the `release notes` and `change log`
+- go to `rn-diff` to see the `diff`, or `generate` it
+- go `file-by-file` and make the changes manually
+- make sure `any custom additions and modules` are compatible and working
+
+Upgrading `manually` helped me understand `what changed` in my projects
+
+I `almost never` had a problem
+
+<Notes>
+https://github.com/ncuillery/rn-diff
+
+when i had a problem it was because there was a difference between my code and the template
+</Notes>
+
+---
+
+### current flow
+
+- get `notification` for new release
+- read the `release notes` and `change log`
+- try `npx react-native upgrade`
+- get diff from `upgrade-helper`
+- go `file-by-file` and make the changes manually
+- start with `config` and `js` stuff, then `iOS`, then `Android` native
+- make sure `any custom additions and modules` are compatible and working
+- `test` to make sure things still work
+- use hooks or whatever `cool new feature` is in that new release or rc 💪
+
+<Notes>
+
+new release, get excited
+
+https://github.com/facebook/react-native/releases
+
+https://react-native-community.github.io/upgrade-helper/?from=0.59.10&to=0.60.0
+
+npx r-n upgrade, even if its not perfect, report issues
+
+</Notes>
+
+---
+
+### tips
+
+- manual does not mean `slow`, it means `careful`
+- be mindful of `what changed`
+- `pick and choose` your changes
+- try to `stay up to date`
+- try not to `jump` too many versions
+- `xcodeproj` needs some care while being changed for now
+
+<Notes>
+
+file by file means we pick and choose. maybe we skip a file, maybe we dont need it.
+
+manual is not slow. its careful
+
+xcode you need to change things in xcode, and see the diff
+
+it will be easier in the future
+
+</Notes>
+
+---
+
 ### wonderful people so far
 
 @`ncuillery`
@@ -425,73 +493,6 @@ you for helping in the future
 
 ---
 
-### current flow
-
-- get `notification` for new release
-- read the `release notes` and `change log`
-- try `npx react-native upgrade`
-- get diff from `upgrade-helper`
-- go `file-by-file` and make the changes manually
-- start with `config` and `js` stuff, then `iOS`, then `Android` native
-- make sure `any custom additions` are compatible and working
-- `test` to make sure things still work
-- use hooks or whatever `cool new feature` is in that new release or rc 💪
-
-<Notes>
-
-new release, get excited
-
-https://github.com/facebook/react-native/releases
-
-https://react-native-community.github.io/upgrade-helper/?from=0.59.10&to=0.60.0
-
-npx r-n upgrade, even if its not perfect, report issues
-
-</Notes>
-
----
-
-### tips
-
-- manual does not mean `slow`, it means `careful`
-- be mindful of `what changed`
-- `pick and choose` your changes
-- try to `stay up to date`
-- try not to `jump` too many versions
-- `xcodeproj` needs to be similarly changed
-
-<Notes>
-
-file by file means we pick and choose. maybe we skip a file, maybe we dont need it.
-
-manual is not slow. its careful
-
-xcode you need to change things in xcode, and see the diff
-
-it will be easier in the future
-
-</Notes>
-
----
-
-## Future: `awesome`
-
----
-
-- `autolinking` and standardization of some tools
-- `rn-diff-purge` diff generation on CI
-- investigating into tools to make things easier and decoupled like `xcodegen` etc
-
-<Notes>
-
-with help with the upgrading, not so many differences
-
-same as with cocoapods
-
-</Notes>
-
----
-
 ### wonderful people of tomorrow
 
 @`your_name_here`
@@ -513,6 +514,8 @@ Try the suggested flow
 Try the tips
 
 Talk with your team
+
+Talk to us
 
 <Notes>
 complain or praise on twitter
@@ -544,8 +547,9 @@ follow me on twitter or make issues if there are problems or if it worked!
 
 ### extra links
 
-- https://github.com/guhungry/laravel-diff-purge (uses the purge way)
-- https://github.com/nirre7/ignite-bowser-diff-purge (uses the purge way)
+- [github.com/pvinis/template-diff-purge](https://github.com/pvinis/template-diff-purge) (template of the purge way)
+- [github.com/guhungry/laravel-diff-purge](https://github.com/guhungry/laravel-diff-purge) (uses the purge way)
+- [github.com/nirre7/ignite-bowser-diff-purge](https://github.com/nirre7/ignite-bowser-diff-purge) (uses the purge way)
 
 
 <!--
