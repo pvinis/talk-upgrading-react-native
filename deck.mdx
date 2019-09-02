@@ -101,9 +101,9 @@ show of hands
 
 ---
 
-- past: `pain`
-- present: `pretty good`
-- future: `awesome`
+- Past: `pain`
+- Present: `pretty good`
+- Future: `awesome`
 
 ---
 
@@ -141,8 +141,8 @@ its hard because
 ### iOS
 
 - ObjC/Swift
-- complicated `xcodeproj` files and `scheme`s and `config`s
-- `carthage`, `cocoapods`, `manual` ways to link libraries
+- Complicated `xcodeproj` files and `scheme`s and `config`s
+- Multiple ways to link libraries: `carthage`, `cocoapods`, `manual`
 - Xcode
 
 ---
@@ -155,10 +155,10 @@ its hard because
 
 ---
 
-### `expo` exists
+### `Expo` exists
 
-- it's `awesome`
-- it helps people build apps without the need to go native
+- It's `awesome`
+- It helps people build apps without the need to go native
 
 <Appear>
 
@@ -187,11 +187,11 @@ can go very hard
 
 ---
 
-upgrading `react` on the web meant:
+Upgrading `react` on the web meant:
 
-- change the version number
+- `Change the version number`
 - yarn install
-- see if it works
+- `Does it work?` 😃
 
 <Notes>
 by running tests or click around
@@ -199,29 +199,29 @@ by running tests or click around
 
 ---
 
-upgrading `react native` meant:
+Upgrading `react native` meant:
 
-- change the version number
+- `Change the version number`
 - yarn install
-- see if it works
-- fix native stuff
-- see if it works
-- upgrade libraries
-- see if it works
-- fix libraries native stuff
-- see if it works
-- google things
-- see if it works
+- `Does it work?` 😃
+- Fix native stuff
+- `Does it work now?` 🙂
+- Upgrade libraries
+- `Does it work yet?` 🤨
+- Fix libraries native stuff
+- `Does it work, please?` 😩
+- Google things
+- `Why don't you work already?` 😭
 
 <Notes>
-almost the same
+not as easy
 </Notes>
 
 ---
 
 ### "Can't avoid it, let's automate it"
 
-- original `react-native upgrade`
+- `react-native upgrade`
 - `rnpm upgrade`
 - `react-native-git-upgrade`
 - `rn-diff` repo
@@ -256,8 +256,8 @@ I only used `rn-diff`
 
 ### rn-diff-purge
 
-- stood on the shoulders of the people and repos before me
-- tries to remove all previous problems
+- Stood on the shoulders of the people and repos before me
+- Tries to remove all previous problems
 - I wanted this for my projects
 
 <Notes>
@@ -283,8 +283,8 @@ like most open source.. for me to use, happy if anyone else uses it too
 
 ### rn-diff-purge
 
-- based on the project init `template`
-- start a new `branch`
+- Based on the project init `template`
+- Start a new `branch`
 - `init` a new project
 - `diff` and keep as a patch file
 
@@ -306,9 +306,9 @@ even downgrades
 
 ### rn-diff-purge
 
-- base of our current upgrade flow
-- people already used the idea for `laravel` and `ignite bowser`
-- soon a template repo on github, ready to be cloned and reused
+- Base of our current upgrade flow
+- People already used the idea for `laravel` and `ignite bowser`
+- Soon a template repo on github, ready to be cloned and reused
 
 <Notes>
 create-react-app
@@ -320,24 +320,24 @@ links at the end
 
 ### upgrade-helper
 
-- started as `purge-web`, just pointing to the `diff` file
-- allows to chose a `from` and a `to` release
-- gives all the changes of the `init template`
-- uses `rn-diff-purge`
-- steadily becoming `more awesome`
+- Started as `purge-web`, just pointing to the `diff` file
+- Allows to chose a `from` and a `to` release
+- Gives all the changes of the `init template`
+- Uses `rn-diff-purge`
+- Steadily becoming `more awesome`
 
 ---
 
 ### upgrade-helper
 
-- better visuals
-- `github-like` diff views
-- see `raw` files
+- Better visuals
+- `Github-like` diff views
+- See `raw` files and `download`
 - file `folding`
-- `links` to release notes
-- notes `explaining` changes
-- logo and party popper 🎉
-- support for `rc releases`
+- `Links` to release notes
+- Notes `explaining` changes
+- Logo and party popper 🎉
+- Support for `rc releases`
 
 <Notes>
 https://react-native-community.github.io/upgrade-helper/
@@ -347,9 +347,9 @@ https://react-native-community.github.io/upgrade-helper/
 
 ### npx react-native upgrade (cli)
 
-- just run `npx react-native upgrade`
-- uses `rn-diff-purge`
-- tries to `apply` the diff
+- Just run `npx react-native upgrade`
+- Uses `rn-diff-purge`
+- Tries to `apply` the diff
 
 It might not work because of differences between the template and each project
 
@@ -374,9 +374,9 @@ it kind of becomes your responsibility to make sure it works after an upgrade
 
 ---
 
-- `autolinking` and standardization of some tools
+- `Autolinking` and standardization of some tools
 - `rn-diff-purge` diff generation on CI
-- investigating into tools like `xcodegen`, to decouple and make easier
+- Investigating into tools like `xcodegen`, to decouple and make easier
 
 <Notes>
 
@@ -384,63 +384,19 @@ with help with the upgrading, not so many differences
 
 same as with cocoapods
 
-</Notes>
-
----
-
-### old flow
-
-- get `notification` for new release
-- read the `release notes` and `change log`
-- go to `rn-diff` to see the `diff`, or `generate` it
-- go `file-by-file` and make the changes manually
-- make sure `any custom additions and modules` are compatible and working
-
-Upgrading `manually` helped me understand `what changed` in my projects
-
-I `almost never` had a problem
-
-<Notes>
-https://github.com/ncuillery/rn-diff
-
-when i had a problem it was because there was a difference between my code and the template
-</Notes>
-
----
-
-### current flow
-
-- get `notification` for new release
-- read the `release notes` and `change log`
-- try `npx react-native upgrade`
-- get diff from `upgrade-helper`
-- go `file-by-file` and make the changes manually
-- start with `config` and `js` stuff, then `iOS`, then `Android` native
-- make sure `any custom additions and modules` are compatible and working
-- `test` to make sure things still work
-- use hooks or whatever `cool new feature` is in that new release or rc 💪
-
-<Notes>
-
-new release, get excited
-
-https://github.com/facebook/react-native/releases
-
-https://react-native-community.github.io/upgrade-helper/?from=0.59.10&to=0.60.0
-
-npx r-n upgrade, even if its not perfect, report issues
+libraries dont break as much
 
 </Notes>
 
 ---
 
-### tips
+### Tips
 
-- manual does not mean `slow`, it means `careful`
-- be mindful of `what changed`
-- `pick and choose` your changes
-- try to `stay up to date`
-- try not to `jump` too many versions
+- Manual does not mean `slow`, it means `careful`
+- Be mindful of `what changed`
+- `Pick and choose` your changes
+- Try to `stay up to date`
+- Try not to `jump` too many versions
 - `xcodeproj` needs some care while being changed for now
 
 <Notes>
@@ -457,7 +413,50 @@ it will be easier in the future
 
 ---
 
-### wonderful people so far
+### Upgrade flow
+
+- Get `notification` for new release
+- Read the `release notes` and `change log`
+- Try `npx react-native upgrade`
+- Get diff from `upgrade-helper`
+- Go `file-by-file` and make the changes manually
+- Start with `config` and `js` stuff, then `iOS`, then `Android` native
+- Make sure `any custom additions` and `modules` are compatible and working
+- `Test` to make sure things still work
+- Use hooks or whatever `cool new feature` is in that new release or rc 💪
+
+<Notes>
+
+new release, get excited
+
+https://github.com/facebook/react-native/releases
+
+https://react-native-community.github.io/upgrade-helper/?from=0.59.10&to=0.60.0
+
+npx r-n upgrade, even if its not perfect, report issues
+
+</Notes>
+
+---
+
+### Conclusion
+
+- Upgrading has gotten `better`, `simpler`, more `mature` and it will `keep improving`
+- It might always be a `manual` process, or it might be `automatic`
+- People used to say `"upgrading is hard"`
+- Now people say `"that specific thing was hard while upgrading"`
+
+<Notes>
+general complaints
+
+now its specific complaints, matured
+
+we are getting there
+</Notes>
+
+---
+
+### Wonderful people so far
 
 @`ncuillery`
 @`lucasbento`
@@ -479,9 +478,9 @@ it will be easier in the future
 @`guhungry`
 ...
 
-- RN Core team
-- RN Contributors community
-- Sense Health
+- `RN Core` team
+- `RN Contributors` community
+- `Sense Health`
 
 <Notes>
 thanks to these wonderful people for their time and effort
@@ -493,25 +492,25 @@ you for helping in the future
 
 ---
 
-### wonderful people of tomorrow
+### Wonderful people of tomorrow
 
 @`your_name_here`
 
 https://github.com/react-native-community, https://github.com/react-native
 
 Look around, contribute:
-- make PRs
-- test out PRs
-- create issues
-- answer issues
+- Make PRs
+- Test out PRs
+- Create issues
+- Answer issues
 
 ---
 
 Don't be afraid of upgrading
 
-Try the suggested flow
+Keep the tips in mind
 
-Try the tips
+Try the suggested flow
 
 Talk with your team
 
@@ -526,18 +525,42 @@ complain or praise on twitter
 ## Thank you 💜
 
 ---
+<!--
 
 ## Thank you 💜
 
-- https://github.com/react-native-community (purge, upgrade-helper, cli)
-- https://niceday.app (app I'm working on)
-- https://github.com/pvinis/template-diff-purge (template of the purge way)
-- https://github.com/pvinis/talk-upgrading-react-native (this talk)
-- https://twitter.com/pvinis (my twitter)
-- https://github.com/pvinis (my github)
-- https://pvin.is (my blog, under construction 🚧)
-- https://pavlos.dev (my portfolio, even more under construction 🚧)
-- https://www.youtube.com/watch?v=wBp5_E7dsEY (video of me upgrading and explaining)
+- [github.com/react-native-community](https://github.com/react-native-community) (purge, upgrade-helper, cli)
+- [niceday.app](https://niceday.app) (app I'm working on)
+- [github.com/pvinis/talk-upgrading-react-native](https://github.com/pvinis/talk-upgrading-react-native) (this talk)
+- [twitter.com/pvinis](https://twitter.com/pvinis) (my twitter)
+- [github.com/pvinis](https://github.com/pvinis) (my github)
+- [pvin.is](https://pvin.is) (my blog, 🚧)
+- [pavlos.dev](https://pavlos.dev) (my portfolio, 🚧)
+- [youtube.com/watch?v=wBp5_E7dsEY](https://youtube.com/watch?v=wBp5_E7dsEY) (video of me upgrading and explaining)
+
+<Notes>
+follow me on twitter or make issues if there are problems or if it worked!
+</Notes>
+
+---
+-->
+
+<Split>
+
+<img src={myFace} />
+
+## Thank you 💜
+
+- [github.com/react-native-community](https://github.com/react-native-community) (purge, upgrade-helper, cli)
+- [niceday.app](https://niceday.app) (app I'm working on)
+- [github.com/pvinis/talk-upgrading-react-native](https://github.com/pvinis/talk-upgrading-react-native) (this talk)
+- [twitter.com/pvinis](https://twitter.com/pvinis) (my twitter)
+- [github.com/pvinis](https://github.com/pvinis) (my github)
+- [pvin.is](https://pvin.is) (my blog, 🚧)
+- [pavlos.dev](https://pavlos.dev) (my portfolio, 🚧)
+- [youtube.com/watch?v=wBp5_E7dsEY](https://youtube.com/watch?v=wBp5_E7dsEY) (video of me upgrading and explaining)
+
+</Split>
 
 <Notes>
 follow me on twitter or make issues if there are problems or if it worked!
@@ -545,7 +568,7 @@ follow me on twitter or make issues if there are problems or if it worked!
 
 ---
 
-### extra links
+### Extra links
 
 - [github.com/pvinis/template-diff-purge](https://github.com/pvinis/template-diff-purge) (template of the purge way)
 - [github.com/guhungry/laravel-diff-purge](https://github.com/guhungry/laravel-diff-purge) (uses the purge way)
@@ -553,7 +576,5 @@ follow me on twitter or make issues if there are problems or if it worked!
 
 
 <!--
-
-add footer with @pvinis and maaaybe number slides
 
 -->
