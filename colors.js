@@ -12,5 +12,10 @@ const dark = {
     text: '#aaa',
     accent: purple,
 }
+const darkHighContrast = {
+    background: '#111',
+    text: '#fff',
+    accent: purple,
+}
 
-export const { accent, background, text } = dark
+export const { accent, background, text } = darkHighContrast
