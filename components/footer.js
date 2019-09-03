@@ -7,7 +7,7 @@ import { accent, text } from '../colors'
 const MyText = props => (
     <Text {...props} style={{
         color: text,
-        fontFamily: 'Iosevka Web',
+        fontFamily: 'Iosevka Web, Iosevka',
         fontSize: 30,
     }} />
 )

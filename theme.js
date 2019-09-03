@@ -6,9 +6,9 @@ import { accent, background, text } from './colors'
 export const myTheme = {
     Provider,
     fonts: {
-        heading: 'Iosevka Web',
-        body: 'Iosevka Web',
-        monospace: 'Iosevka Web',
+        heading: 'Iosevka Web, Iosevka',
+        body: 'Iosevka Web, Iosevka',
+        monospace: 'Iosevka Web, Iosevka',
     },
     colors: {
         text,
@@ -17,7 +17,7 @@ export const myTheme = {
     },
     styles: {
         root: {
-            fontFamily: 'Iosevka Web',
+            fontFamily: 'Iosevka Web, Iosevka',
             fontWeight: 300, // light
         },
         h1: {
