@@ -6,6 +6,14 @@ import myFace from './images/my-face2.png'
 import myFace2 from './images/my-face.png'
 import howbow from './images/howbow.jpg'
 import howbow2 from './images/howbow.webp'
+import laravel from './screenshots/laravel.png'
+import old1 from './screenshots/rn-diff-old-1.png'
+import old2 from './screenshots/rn-diff-old-2.png'
+import purge1 from './screenshots/rn-diff-purge-1.png'
+import purge2 from './screenshots/rn-diff-purge-2.png'
+import helper1 from './screenshots/upgrade-helper-1.png'
+import helper2 from './screenshots/upgrade-helper-2.png'
+import helper3 from './screenshots/upgrade-helper-3.png'
 
 
 export const theme = myTheme
@@ -30,6 +38,8 @@ first talk
 thanks to RN EU!
 
 summary. past etc, tips
+
+notifs off
 
 </Notes>
 
@@ -85,7 +95,9 @@ People love `fresh` React Native
 
 dreadful for many
 
-per 2 weeks, 1 month, big feature
+per 2 weeks, from outside definition of "make it work, make it better later"
+
+1 month, big feature
 
 </Notes>
 
@@ -106,7 +118,7 @@ per 2 weeks, 1 month, big feature
 show of hands
 
 - done an upgrade?
-- painful, ok, so easy?
+- painful, good, so easy?
 
 </Notes>
 
@@ -179,11 +191,14 @@ You need to know all:
 
 need to eject, back to the hard part
 
+draftbit, give me that early access
+
+
 </Notes>
 
 ---
 
-### JS/TS
+### JS/TS, packages, libraries, modules
 
 - `babel`, `metro`, `eslint`, `typescript`, ...
 - `netinfo`, `keep-awake`, `async-storage`, ...
@@ -251,7 +266,7 @@ Upgrading `react native` meant:
 - `Does it work now?` 🙂
 - Upgrade libraries
 - `Does it work yet?` 🤨
-- Fix libraries native stuff
+- Fix libraries' native stuff
 - `Does it work, please?` 😩
 
 ---
@@ -265,7 +280,7 @@ Upgrading `react native` meant:
 - `Does it work now?` 🙂
 - Upgrade libraries
 - `Does it work yet?` 🤨
-- Fix libraries native stuff
+- Fix libraries' native stuff
 - `Does it work, please?` 😩
 - Google things, ask for help
 - `Why don't you work already?` 😭
@@ -273,6 +288,8 @@ Upgrading `react native` meant:
 <Notes>
 
 not as easy
+
+libs need to be in sync
 
 </Notes>
 
@@ -311,6 +328,14 @@ https://github.com/react-native-community/rn-diff-purge/tree/old/master
 
 ---
 
+<img src={old1} />
+
+---
+
+<img src={old2} />
+
+---
+
 ## Present: `pretty good` 🙂
 
 ---
@@ -328,13 +353,6 @@ https://github.com/react-native-community/rn-diff-purge/tree/old/master
 - `I` wanted this for `my` projects
 
 <Notes>
-
-took rn-diff
-
-problems:
-
-- linear upgrading, grid is better, rc
-- github diffing cant handle branches
 
 https://github.com/react-native-community/rn-diff-purge/tree/old/master
 
@@ -359,6 +377,13 @@ like most open source.. for me to use, happy if anyone else uses it too
 
 <Notes>
 
+run script?
+
+show script code?
+
+problems:
+- linear upgrading, grid is better, rc
+- github diffing cant handle branches
 Store diffs, don't depend on GitHub
 
 from -> to every other release, with the new release
@@ -373,6 +398,18 @@ https://react-native-community.github.io/rn-diff-purge
 
 ---
 
+<img src={old1} />
+
+---
+
+<img src={purge1} />
+
+---
+
+<img src={purge2} />
+
+---
+
 ### rn-diff-purge
 
 - `Base` of our current upgrade flow
@@ -383,7 +420,9 @@ https://react-native-community.github.io/rn-diff-purge
 
 create-react-app
 
-links at the end
+typescript init template
+
+not ideal way to navigate
 
 </Notes>
 
@@ -395,7 +434,16 @@ links at the end
 - Allows to choose a `from` and a `to` release
 - Gives all the changes of the `init template`
 - Uses `rn-diff-purge`
-- Steadily becoming `more awesome`
+
+---
+
+<img src={helper1} />
+
+<Notes>
+
+steadily becoming more awesome
+
+</Notes>
 
 ---
 
@@ -409,8 +457,13 @@ links at the end
 - Notes `explaining` changes
 - Logo and party popper 🎉
 - Support for `rc releases`
+- Dark mode
 
 <Notes>
+
+give shoutout to lucas bento, clap?
+
+show it!! notes, links, popper
 
 https://react-native-community.github.io/upgrade-helper/
 
@@ -447,19 +500,15 @@ it kind of becomes your responsibility to make sure it works after an upgrade
 
 ---
 
-- `Autolinking` and standardization of some tools
+- Native Modules `Autolinking`
+- Standardization of some tools like `CocoaPods`
 - `rn-diff-purge` diff generation on CI
 - Investigating into tools like `xcodegen`, to decouple and make easier
+- Your suggestion here
 
 <Notes>
 
-react-native doctor
-
-with help with the upgrading, not so many differences
-
-same as with cocoapods
-
-libraries dont break as much
+minimize the area of contact for platforms, so change can happen without required work during an upgrade
 
 </Notes>
 
@@ -502,13 +551,11 @@ npx r-n upgrade, even if its not perfect, report issues
 
 <Notes>
 
-file by file means we pick and choose. maybe we skip a file, maybe we dont need it.
-
-manual is not slow. its careful
-
 xcode you need to change things in xcode, and see the diff
 
-it will be easier in the future
+talk with an ios guy
+
+it will be easier in the future xcodegen
 
 </Notes>
 
@@ -601,6 +648,10 @@ Talk to us
 
 <Notes>
 
+people in this conf complained
+
+please try again
+
 complain or praise on twitter
 
 </Notes>
@@ -628,8 +679,9 @@ Find me at the coffee break or on twitter
 ## Thank you 💜
 
 - [twitter.com/pvinis](https://twitter.com/pvinis) (@ me)
-- [youtube.com/watch?v=wBp5_E7dsEY](https://youtube.com/watch?v=wBp5_E7dsEY) (video of me upgrading and explaining)
-- [github.com/pvinis/talk-upgrading-react-native](https://github.com/pvinis/talk-upgrading-react-native) (this talk)
+- [youtu.be/wBp5_E7dsEY](https://youtu.be/wBp5_E7dsEY) (video of me upgrading and explaining)
+- [pavlos.dev/talk](https://pavlos.dev/talk) (this talk, pdf)
+- [pavlos.dev/talk-code](https://pavlos.dev/talk) (this talk, pdf)
 - [niceday.app](https://niceday.app) (app we work on)
 - [pvin.is](https://pvin.is) (my blog, 🚧)
 - [pavlos.dev](https://pavlos.dev) (my portfolio, 🚧)
@@ -646,10 +698,11 @@ follow me on twitter or make issues if there are problems or if it worked!
 
 ### Extra links
 
+- [github.com/react-native-community/upgrade-helper](https://github.com/react-native-community/upgrade-helper) (our awesome tool)
+- [github.com/react-native-community/rn-diff-purge](https://github.com/react-native-community/rn-diff-purge) (purge repo)
 - [github.com/pvinis/template-diff-purge](https://github.com/pvinis/template-diff-purge) (template of the purge way)
 - [github.com/guhungry/laravel-diff-purge](https://github.com/guhungry/laravel-diff-purge) (uses the purge way)
 - [github.com/nirre7/ignite-bowser-diff-purge](https://github.com/nirre7/ignite-bowser-diff-purge) (uses the purge way)
-
 
 <!--
 
