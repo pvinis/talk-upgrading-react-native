@@ -160,7 +160,7 @@ You need to know all:
 ### iOS
 
 - ObjC/Swift
-- Complicated `xcodeproj` files and `scheme`s and `config`s
+- Complicated `xcodeproj` files and `scheme`s and `xcconfig`s
 - Multiple ways to link libraries: `carthage`, `cocoapods`, `manual`
 - Xcode
 
@@ -377,7 +377,8 @@ run script!!
 
 - `Start` a new `branch` for each release
 - `init` a new project based on the `template`
-- `diff` and `store` as a patch file
+- `diff` branch with all other branches
+- `store` as a patch file
 
 <Notes>
 
@@ -510,6 +511,7 @@ it kind of becomes your responsibility to make sure it works after an upgrade
 
 - Native Modules `Autolinking`
 - Standardization of some tools like `CocoaPods`
+- `Lean Core`, separate components
 - `rn-diff-purge` diff generation on CI
 - Investigating into tools like `xcodegen`, to decouple and make easier
 - Your suggestion here
@@ -538,13 +540,13 @@ minimize the area of contact for platforms, so change can happen without require
 
 new release, get excited, 61, fast refresh
 
+orta detailed talk, now inside the xcode project file
+
 SHOW IT!!
 
 https://github.com/facebook/react-native/releases
 
 https://react-native-community.github.io/upgrade-helper/?from=0.59.10&to=0.60.0
-
-npx r-n upgrade, even if its not perfect, report issues
 
 (20min)
 
@@ -559,7 +561,7 @@ npx r-n upgrade, even if its not perfect, report issues
 - `Pick and choose` your changes
 - Try to `stay up to date`
 - Try not to `jump` too many versions
-- `xcodeproj` needs some care while being changed for now
+- `xcodeproj` needs some love while upgrading for now
 
 <Notes>
 
